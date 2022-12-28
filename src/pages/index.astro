@@ -1,48 +1,21 @@
 ---
+import Featured from "../components/Featured.astro";
+import Hero from "../components/Hero.astro";
+import Overview from "../components/Overview.astro";
+import Products from "../components/Products.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro">
 	<main class="container mx-auto p-2 md:p-4">
-		<section class="hero">hero</section>
+		<Hero />
 
-		<section class="overview md:grid gap-4 grid-cols-[1.618fr_1fr]">
-			<div class="blurb space-y-5">
-				<h1 class="headline text-2xl text-[var(--accent-color)]">
-					MetaStock - A Global Leader in Market Analysis Tools
-				</h1>
-				<p>
-					The result is buy and sell signals you can count on. We have options
-					for day traders, swing traders and EOD traders to trade stocks,
-					options, futures, FOREX and more. Try MetaStock and we are confident
-					you’ll agree that it’s the best charting software available to the
-					private trader.
-				</p>
-				<p>
-					MetaStock has been providing award-winning charting and analysis tools
-					for the self-directed trader for over 30 years. Capitalizing on
-					technical analysis, our line of trading software and market data are
-					designed for active traders of all levels so they can backtest, scan
-					and analyze the markets with confidence.
-				</p>
-			</div>
-			<div class="media flex justify-center">
-				<img
-					class="w-full h-full max-w-[417px] inline-block"
-					src="https://www.metastock.com/images/w/MS-Montor-417px.png"
-					alt=" Monitor showing MetaStock running"
-				/>
-			</div>
-		</section>
+		<Overview />
 
-		<section class="products">products</section>
+		<Products />
 
-		<section class="featured">featured</section>
+		<Featured />
 	</main>
 </Layout>
 
-<style>
-	main > section {
-		@apply mb-6 border-b-2 border-b-slate-400 pb-6;
-	}
-</style>
+<style is:global></style>
